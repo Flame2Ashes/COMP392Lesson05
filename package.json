@@ -1,21 +1,21 @@
 {
   "name": "comp392-lab3",
   "version": "1.0.0",
-  "description": "COMP392-Lab3 for Centennial College",
+  "description": "COMP392Less05 for Centennial College",
   "main": "game.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Flame2Ashes/COMP392-Lab3.git"
+    "url": "git+https://github.com/Flame2Ashes/COMP392Lesson05.git"
   },
   "author": "Angelina Gutierrez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Flame2Ashes/COMP392-Lab3/issues"
+    "url": "https://github.com/Flame2Ashes/COMP392Lesson05/issues"
   },
-  "homepage": "https://github.com/Flame2Ashes/COMP392-Lab3#readme",
+  "homepage": "https://github.com/Flame2Ashes/COMP392Lesson05#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-util": "^3.0.7"

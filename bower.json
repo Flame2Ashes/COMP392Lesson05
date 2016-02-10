@@ -3,11 +3,11 @@
   "authors": [
     "Angelina Gutierrez <angelina.ogutierrez@gmail.com>"
   ],
-  "description": "COMP392-Lab3 for Advanced Graphics",
+  "description": "COMP392Lesson05 for Advanced Graphics",
   "main": "",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "https://github.com/Flame2Ashes/COMP392-Lab3",
+  "homepage": "https://github.com/Flame2Ashes/COMP392Lesson05",
   "ignore": [
     "**/.*",
     "node_modules",
