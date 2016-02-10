@@ -47,6 +47,7 @@ var step: number = 0;
 var cubeGeometry:CubeGeometry;
 var cubeMaterial:LambertMaterial;
 var cubeChild: Mesh;
+var emptyObject: Object3D;
 
 
 function init() {
@@ -83,6 +84,10 @@ function init() {
     scene.add(cube);
     console.log("Added Cube Primitive to scene...");
     
+    emptyObject = new Object3D();
+    emptyObject.position.set(0, 5, 0);
+    cube.add(emptyObject);
+    
     //Don't you dare talk to me
     
 cubeChild = new gameObject (
@@ -90,6 +95,8 @@ cubeChild = new gameObject (
     new LambertMaterial({color: 0x00ff00}),
     10, 1, 0);
     cube.add(cubeChild);
+    
+    emptyObject.add(cubeChild);
     
     //....or my son ever again
     
@@ -147,6 +154,7 @@ function gameLoop(): void {
     stats.update();
 
     cube.rotation.y += control.rotationSpeed;
+    emptyObject.rotation.x += control.rotationSpeed;
     
     // render using requestAnimationFrame
     requestAnimationFrame(gameLoop);

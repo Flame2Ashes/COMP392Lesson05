@@ -43,6 +43,7 @@ var step = 0;
 var cubeGeometry;
 var cubeMaterial;
 var cubeChild;
+var emptyObject;
 function init() {
     // Instantiate a new Scene object
     scene = new Scene();
@@ -61,9 +62,13 @@ function init() {
     cube = new gameObject(new CubeGeometry(10, 10, 10), new LambertMaterial({ color: 0x0000ff }), 0, 5, 0);
     scene.add(cube);
     console.log("Added Cube Primitive to scene...");
+    emptyObject = new Object3D();
+    emptyObject.position.set(0, 5, 0);
+    cube.add(emptyObject);
     //Don't you dare talk to me
     cubeChild = new gameObject(new CubeGeometry(2, 2, 2), new LambertMaterial({ color: 0x00ff00 }), 10, 1, 0);
     cube.add(cubeChild);
+    emptyObject.add(cubeChild);
     //....or my son ever again
     // Add an AmbientLight to the scene
     ambientLight = new AmbientLight(0x090909);
@@ -109,6 +114,7 @@ function addStatsObject() {
 function gameLoop() {
     stats.update();
     cube.rotation.y += control.rotationSpeed;
+    emptyObject.rotation.x += control.rotationSpeed;
     // render using requestAnimationFrame
     requestAnimationFrame(gameLoop);
     // render the scene
